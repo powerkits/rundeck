@@ -15,4 +15,4 @@ jobs:
     steps:
     - uses: actions/checkout@v4
     - name: Build the Docker image
-      run: pwd && cd /home/runner/work/rundeck/rundeck/docker/offical &&docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      run: docker build . --file docker/official/Dockerfile --tag rundeck:4.12
